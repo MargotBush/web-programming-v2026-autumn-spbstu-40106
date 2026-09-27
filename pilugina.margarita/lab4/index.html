@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная работа 4</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Путешествия</h1>
+
+      <div class="controls">
+        <input
+          id="travel-id"
+          type="number"
+          placeholder="ID путешествия"
+          min="1"
+        />
+
+        <input
+          id="traveler-name"
+          type="text"
+          placeholder="Имя путешественника"
+        />
+
+        <input id="country" type="text" placeholder="Страна" />
+
+        <button id="add-country">Добавить страну</button>
+        <button id="remove-country">Удалить страну</button>
+        <button id="add-travel">Добавить путешествие</button>
+        <button id="remove-travel">Удалить путешествие</button>
+      </div>
+
+      <div id="travel-list" class="travel-list"></div>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
