@@ -1,0 +1,38 @@
+.flex-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  border: 1px solid black;
+}
+
+/* Текст позиционируется относительно контейнера */
+.example-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Область, которую обтекают строки текста */
+.example-text::before {
+  content: '';
+  float: right;
+  width: 150px;
+  height: 150px;
+  margin: 0 0 16px 16px;
+}
+
+/* Изображение занимает зарезервированную область */
+.example-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
