@@ -47,17 +47,19 @@ export function findTravelsByCountry(travels, country) {
 }
 
 export function groupTravelersByCountry(travels) {
-  return travels.reduce((result, travel) => {
+  const groups = new Map();
+
+  travels.forEach((travel) => {
     travel.visitedCountries.forEach((country) => {
-      if (!result[country]) {
-        result[country] = [];
+      if (!groups.has(country)) {
+        groups.set(country, []);
       }
 
-      result[country].push(travel.travelerName);
+      groups.get(country).push(travel.travelerName);
     });
+  });
 
-    return result;
-  }, {});
+  return groups;
 }
 
 export function getTravelersWithMoreThanNCountries(travels, n) {
