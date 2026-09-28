@@ -23,16 +23,19 @@ export class Travel {
 }
 
 export function groupTravelsByCountryCount(travels) {
-  return travels.reduce((result, travel) => {
+  const groups = new Map();
+
+  travels.forEach((travel) => {
     const count = travel.visitedCount;
 
-    if (!result[count]) {
-      result[count] = [];
+    if (!groups.has(count)) {
+      groups.set(count, []);
     }
 
-    result[count].push(travel);
-    return result;
-  }, {});
+    groups.get(count).push(travel);
+  });
+
+  return groups;
 }
 
 export function getUniqueCountries(travels) {
