@@ -11,29 +11,33 @@
     <main>
       <h1>Путешествия</h1>
 
-      <div class="controls">
+      <form class="controls" data-testid="entity-form">
         <input
           id="travel-id"
+          name="id"
           type="number"
           placeholder="ID путешествия"
           min="1"
+          required
         />
 
         <input
           id="traveler-name"
+          name="travelerName"
           type="text"
           placeholder="Имя путешественника"
+          required
         />
 
-        <input id="country" type="text" placeholder="Страна" />
+        <input id="country" name="country" type="text" placeholder="Страна" />
 
-        <button id="add-country">Добавить страну</button>
-        <button id="remove-country">Удалить страну</button>
-        <button id="add-travel">Добавить путешествие</button>
-        <button id="remove-travel">Удалить путешествие</button>
-      </div>
+        <button id="add-country" type="button">Добавить страну</button>
+        <button id="remove-country" type="button">Удалить страну</button>
+        <button id="add-travel" type="submit">Добавить путешествие</button>
+        <button id="remove-travel" type="button">Удалить путешествие</button>
+      </form>
 
-      <div id="travel-list" class="travel-list"></div>
+      <div id="travel-list" class="travel-list" data-testid="entity-list"></div>
     </main>
 
     <script type="module" src="main.js"></script>

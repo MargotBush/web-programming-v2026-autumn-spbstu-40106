@@ -22,7 +22,7 @@ export class Travel {
   }
 }
 
-export function groupByVisitedCount(travels) {
+export function groupTravelsByCountryCount(travels) {
   return travels.reduce((result, travel) => {
     const count = travel.visitedCount;
 
@@ -31,7 +31,6 @@ export function groupByVisitedCount(travels) {
     }
 
     result[count].push(travel);
-
     return result;
   }, {});
 }
@@ -40,7 +39,7 @@ export function getUniqueCountries(travels) {
   return [...new Set(travels.flatMap((travel) => travel.visitedCountries))];
 }
 
-export function getTravelsByCountry(travels, country) {
+export function findTravelsByCountry(travels, country) {
   return travels.filter((travel) => travel.visitedCountries.includes(country));
 }
 

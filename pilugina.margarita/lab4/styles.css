@@ -5,7 +5,6 @@
 body {
   margin: 0;
   padding: 40px;
-
   font-family: Tahoma, sans-serif;
   color: #ffeacd;
   background-image: url('./assets/bg3.png');
@@ -27,15 +26,12 @@ h1 {
 .controls {
   display: flex;
   flex-wrap: wrap;
-
   gap: 10px;
-
   margin-bottom: 40px;
 }
 
 .controls input {
   width: 180px;
-
   padding: 10px;
   background: #f4faff;
   font-size: 16px;
@@ -43,6 +39,7 @@ h1 {
   color: #f1a98c;
   border: 1px solid #e8f3fb;
 }
+
 ::placeholder {
   font-family: Tahoma, sans-serif;
   color: #b0c9dd;
@@ -50,11 +47,8 @@ h1 {
 
 .controls button {
   padding: 10px 15px;
-
   font-size: 14px;
-
   cursor: pointer;
-
   border: 1px solid #f3cfc0;
   font-family: Tahoma, sans-serif;
   color: #f1a98c;
@@ -67,26 +61,18 @@ h1 {
 
 .travel-list {
   display: flex;
-
   gap: 20px;
-
   width: 100%;
   min-height: 350px;
-
   padding: 25px;
-
   overflow-x: auto;
-
   border: 2px solid #d1ebff;
 }
 
 .travel-card {
   flex: 0 0 260px;
-
   min-height: 280px;
-
   padding: 20px;
-
   border: 2px solid #ffeacd;
   color: #90795a;
   background: #fff7ed;
@@ -94,8 +80,7 @@ h1 {
 
 .travel-card h2 {
   margin-top: 0;
-
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .travel-card ul {
@@ -108,6 +93,5 @@ h1 {
 
 .empty-message {
   margin: auto;
-
-  color: #777777;
+  color: #777;
 }
