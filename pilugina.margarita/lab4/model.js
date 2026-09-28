@@ -62,6 +62,6 @@ export function groupTravelersByCountry(travels) {
   return groups;
 }
 
-export function getTravelersWithMoreThanNCountries(travels, n) {
+export function findTravelsAboveCountryCount(travels, n) {
   return travels.filter((travel) => travel.visitedCount > n);
 }
